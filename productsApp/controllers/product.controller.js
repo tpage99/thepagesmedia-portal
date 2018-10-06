@@ -35,5 +35,14 @@ exports.product_update = function(req, res){
             return next(err);
         }
         res.send('Product updated successfully');
+    });
+};
+
+exports.product_delete = function(req, res){
+    Product.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            return next(err);
+        }
+        res.send('Item has successfully been destroyed!')
     })
 }

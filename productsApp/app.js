@@ -10,7 +10,7 @@ const app = express();
 
 //set up mongoose connection
 const mongoose = require('mongoose');
-let dv_db_url = 'mongodb://tpage99:Kendrais#1@ds141661.mlab.com:41661/thepagesmedia-portal'
+let dev_db_url = 'mongodb://taylor:password1@ds141661.mlab.com:41661/thepagesmedia-portal'
 let mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
